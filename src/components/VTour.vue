@@ -30,6 +30,7 @@
         </div>-->
       </v-step>
     </slot>
+    <div v-if="currentStep !== -1" class="v-tour-highlight-background"></div>
   </div>
 </template>
 
@@ -174,5 +175,15 @@ export default {
 
   .v-tour-position {
     position: relative;
+  }
+
+  .v-tour-highlight-background{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.8;
+    background: radial-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.9));
   }
 </style>
